@@ -61,8 +61,10 @@ public class Facture {
     }
 
     public int getNbProduitTotal() {
+        int produitTotal = 0;
         for (LigneFacture ligneProduit : ligneProduits) {
-            ligneProduits.getQuantiteProduit;
+            produitTotal += ligneProduit.getQuantiteProduit();
         }
+        return produitTotal;
     }
 }
