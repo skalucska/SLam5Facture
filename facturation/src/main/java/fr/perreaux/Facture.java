@@ -31,8 +31,17 @@ public class Facture {
         return prixTotauxHT;
     }
 
-    public void ajouterProduit(LigneFacture produit) {
-        ligneProduits.add(produit);
+    public Produit ajouterProduit(LigneFacture produit) {
+        int newQuantite = 0;
+        for (LigneFacture ligneProduit : ligneProduits) {
+            if (ligneProduit.getCodeLigneProduit() == produit.getCodeLigneProduit()) {
+                newQuantite = ligneProduit.getQuantiteProduit() + 1;
+                return newQuantite;
+            } else {
+                return ligneProduits.add(produit);
+            }
+
+        }
     }
 
     public void supprimerProduit(LigneFacture produit) {
