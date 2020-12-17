@@ -32,4 +32,8 @@ public class LigneFacture {
         System.out.print("     ");
     }
 
+    public String getCodeLigneProduit() {
+        return produit.getCode();
+    }
+
 }

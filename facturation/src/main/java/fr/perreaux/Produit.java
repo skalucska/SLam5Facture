@@ -15,6 +15,10 @@ public class Produit {
 
     }
 
+    public String getCode() {
+        return code;
+    }
+
     public int getPrixTTC() {
         double tva = type.getTva();
         double prixTTC = (prixHT + (prixHT * (tva / 100)));
